@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trollando Você</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      padding: 20px;
+    }
+    .blink {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 50% {
+        opacity: 1;
+      }
+      25%, 75% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="blink">TROLLEI VOCÊ 😂</h1>
+    <p>Sim, eu sei seu IP! É:</p>
+    <p id="ip-address">Buscando...</p>
+    <p>Localização: <span id="location">Processando...</span></p>
+    <p>Sim, eu sei onde você mora! 👀</p>
+  </div>
+
+  <script>
+    // Simula o IP e localização
+    const fakeIP = "192.168.0.1"; // Coloque algo fictício ou engraçado
+    const fakeLocation = "Em algum lugar no mundo";
+
+    document.getElementById("ip-address").textContent = fakeIP;
+    document.getElementById("location").textContent = fakeLocation;
+
+    // Adiciona sons engraçados ao fundo (opcional)
+    const audio = new Audio("https://freesound.org/data/previews/466/466203_9644306-lq.mp3");
+    audio.loop = true;
+    audio.play();
+  </script>
+</body>
+</html>
